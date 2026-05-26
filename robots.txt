@@ -1,0 +1,7 @@
+# robots.txt for https://www.aydinotoservis.com.tr
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.aydinotoservis.com.tr/sitemap.xml

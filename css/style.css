@@ -1,0 +1,299 @@
+/* ==========================================================================
+    AYDIN OTO SERVİS - PREMIUM WEB DESIGN SYSTEM
+    Midnight Cyber & High-Performance HUD Style Sheet
+   ========================================================================== */
+
+/* Base overrides & midnight grid theme */
+body {
+    background-color: #000022;
+    /* Base Midnight Blue */
+    color: #e3e0f8;
+    /* default text */
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar for high-tech HUD experience */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00d2ff;
+    /* cyan */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #47d6ff;
+}
+
+/* High-tech layout grids */
+.bg-tech-grid {
+    background-image:
+        linear-gradient(to right, rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Hexagon/Dot pattern for bento-style cards */
+.bg-hex-pattern {
+    background-image: radial-gradient(rgba(0, 210, 255, 0.08) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* Visual HUD Glow Utilities */
+.glow-text {
+    text-shadow: 0 0 8px rgba(0, 210, 255, 0.8);
+}
+
+.glow-border {
+    box-shadow: inset 0 0 0 1px #00d2ff, 0 0 10px rgba(0, 210, 255, 0.25);
+}
+
+.glow-text-gold {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.glow-border-gold {
+    box-shadow: inset 0 0 0 1px #FFD700, 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.glow-text-red {
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.9);
+}
+
+.glow-border-red {
+    box-shadow: inset 0 0 0 1px #E63946, 0 0 15px rgba(230, 57, 70, 0.4);
+}
+
+/* High-tech top borders resembling neon scanlines */
+.scanline-top {
+    position: relative;
+}
+
+.scanline-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #00d2ff;
+    box-shadow: 0 0 5px #00d2ff;
+}
+
+.scanline-top-red {
+    position: relative;
+}
+
+.scanline-top-red::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #E63946;
+    box-shadow: 0 0 5px #E63946;
+}
+
+/* Material Symbols filled style helper */
+.material-symbols-filled {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Premium Animations & Micro-Interactions */
+@keyframes pulse-red {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 4px rgba(230, 57, 70, 0);
+    }
+}
+
+.pulse-red-glow {
+    animation: pulse-red 2s infinite ease-in-out;
+}
+
+/* Scrolling navbar styling */
+nav.scrolled {
+    background-color: rgba(18, 18, 34, 0.85);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 210, 255, 0.15);
+}
+
+/* Custom styles for maps overlay container */
+.map-glow-container {
+    border: 1px solid rgba(0, 210, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.map-glow-container:hover {
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.3);
+}
+
+/* Multi-page Navbar Active States */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #00d2ff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: #00d2ff !important;
+    text-shadow: 0 0 8px rgba(0, 210, 255, 0.4);
+}
+
+/* Externalized premium image and filter assets */
+.hero-bg-image {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2FdK9cqSX8MCZgBEXo6xkBDNQsXgaxTThaemkJFtCqKfkFoc8fJjLpAVSlkvyT6FyBGbldYif6xxaPyX2y64vkV5B9w0L7OaCuLcejhfuFBcw9uxop8_ElvPCiNwXLzMoyFXKC2n8OOsMMmpPY8t4JWzXZr-a2Qb5nTist06Z6KQgtQzoxE-5GidoPgEWvJURlKNjkO1Fdf3eH39wkjXvMeHvTajVGH8Km73bHc23-QNzMepqag601ok1XuLApoCIeaMca4s718k');
+}
+
+.map-dark-filter {
+    filter: invert(90%) hue-rotate(180deg) grayscale(30%) contrast(120%);
+}
+
+/* Custom HUD Calendar Datepicker styling */
+#hud-calendar {
+    transform-origin: top center;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    max-width: 350px;
+}
+
+/* Custom Grid layout for datepicker, since Tailwind grid classes aren't compiled */
+#hud-calendar .grid,
+#cal-days-grid {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+}
+
+#hud-calendar .grid span {
+    display: block;
+    padding: 6px 0;
+    text-align: center;
+}
+
+/* Custom HUD select style for calendar header drop-downs */
+.cal-header-select {
+    background-color: rgba(18, 18, 34, 0.8) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(230, 57, 70, 0.3) !important;
+    font-family: inherit !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    padding: 3px 20px 3px 6px !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.cal-header-select:hover {
+    border-color: #E63946 !important;
+    color: #00d2ff !important;
+}
+
+.cal-header-select option {
+    background-color: #121222 !important;
+    color: #ffffff !important;
+}
+
+#cal-month-select {
+    width: 115px !important;
+}
+
+#cal-year-select {
+    width: 80px !important;
+}
+
+.cal-day-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #e3e0f8;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.cal-day-cell:hover:not(.disabled):not(.empty) {
+    background-color: rgba(230, 57, 70, 0.2);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #E63946, 0 0 8px rgba(230, 57, 70, 0.3);
+}
+
+.cal-day-cell.selected {
+    background-color: #E63946 !important;
+    color: #fff !important;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(230, 57, 70, 0.7);
+}
+
+.cal-day-cell.disabled {
+    opacity: 0.15;
+    cursor: not-allowed;
+}
+
+.cal-day-cell.empty {
+    cursor: default;
+}
+
+/* GMB Button styles (resolving inline style warnings) */
+.btn-gmb-outline {
+    border: 1px solid rgba(0, 210, 255, 0.3) !important;
+    color: #00d2ff !important;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-gmb-outline:hover {
+    background-color: rgba(0, 210, 255, 0.1) !important;
+    border-color: #00d2ff !important;
+}
+
+.btn-gmb-filled {
+    background-color: #00d2ff !important;
+    color: #121222 !important;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.3) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-gmb-filled:hover {
+    background-color: rgba(0, 210, 255, 0.8) !important;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5) !important;
+}
